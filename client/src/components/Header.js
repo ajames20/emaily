@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Payments from './Payments';
+// import FaGoogle from 'react-icons/fa/google';
 
 class Header extends Component {
   renderNav() {
@@ -22,7 +23,7 @@ class Header extends Component {
           <li style={{ margin: '0 10px' }}>Credits: {this.props.auth.credits}</li>,
           <li key="3">
             <a href="/api/logout">Log Out</a>
-          </li>,
+          </li>
         ];
     }
   }
@@ -42,7 +43,7 @@ class Header extends Component {
 }
 
 const mapStateToProps = ({ auth }) => ({
-  auth,
+  auth
 });
 
 export default connect(mapStateToProps)(Header);
