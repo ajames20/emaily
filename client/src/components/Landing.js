@@ -1,9 +1,12 @@
 import React from 'react';
+require('../css/landing.css');
 
 const Landing = () => {
   return (
-    <div style={{ textAlign: 'center' }}>
-      <h1>Emaily!</h1>
+    <div>
+      <h1>
+        Emaily <i className="fa fa-paper-plane" />
+      </h1>
       <p>Collect feedback from your users!</p>
     </div>
   );

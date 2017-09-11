@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Payments from './Payments';
-// import FaGoogle from 'react-icons/fa/google';
+require('../css/header.css');
 
 class Header extends Component {
   renderNav() {
@@ -12,7 +12,9 @@ class Header extends Component {
       case false:
         return (
           <li>
-            <a href="/auth/google">Login With Google</a>
+            <a href="/auth/google">
+              <i className="fa fa-google" aria-hidden="true" />oogle
+            </a>
           </li>
         );
       default:
@@ -20,11 +22,13 @@ class Header extends Component {
           <li key="1">
             <Payments />
           </li>,
-          <li key="2" style={{ margin: '0 10px' }}>
-            Credits: {this.props.auth.credits}
+          <li key="2" style={{ margin: '0 10px', color: '#3d3f4d', opacity: '.9' }}>
+            Credits: <span style={{ color: '#f4f2f2' }}>{this.props.auth.credits}</span>
           </li>,
           <li key="3">
-            <a href="/api/logout">Log Out</a>
+            <a href="/api/logout" style={{ color: '#3d3f4d', opacity: '.9' }}>
+              Log Out
+            </a>
           </li>
         ];
     }
@@ -33,8 +37,12 @@ class Header extends Component {
   render() {
     return (
       <nav>
-        <div className="nav-wrapper container">
-          <Link to={this.props.auth ? '/surveys' : '/'} className="left brand-logo">
+        <div className="nav-wrapper container header">
+          <Link
+            style={{ color: '#3d3f4d', opacity: '.9' }}
+            to={this.props.auth ? '/surveys' : '/'}
+            className="left brand-logo"
+          >
             EMAILY
           </Link>
           <ul className="right">{this.renderNav()}</ul>
