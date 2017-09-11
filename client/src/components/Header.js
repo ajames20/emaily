@@ -43,6 +43,7 @@ class Header extends Component {
             to={this.props.auth ? '/surveys' : '/'}
             className="left brand-logo"
           >
+            <i className="fa fa-paper-plane" />
             EMAILY
           </Link>
           <ul className="right">{this.renderNav()}</ul>
