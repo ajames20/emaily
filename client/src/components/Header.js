@@ -23,7 +23,7 @@ class Header extends Component {
             <Payments />
           </li>,
           <li key="2" style={{ margin: '0 10px', color: '#3d3f4d', opacity: '.9' }}>
-            Credits: <span style={{ color: '#f4f2f2' }}>{this.props.auth.credits}</span>
+            Credits: <span style={{ color: '#fdfdfd', fontSize: '19px' }}>{this.props.auth.credits}</span>
           </li>,
           <li key="3">
             <a href="/api/logout" style={{ color: '#3d3f4d', opacity: '.9' }}>
