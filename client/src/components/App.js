@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import Header from './Header';
+import Dashboard from './Dashboard';
+import SurveysNew from './SurveysNew';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 import Landing from './Landing';
 require('../css/main.css');
-
-const Dashboard = () => <h2>Dashboard</h2>;
-const SurveysNew = () => <h2>Surveys</h2>;
 
 class App extends Component {
   componentDidMount() {
