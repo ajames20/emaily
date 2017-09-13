@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Payments from './Payments';
-require('../css/header.css');
 
 class Header extends Component {
   renderNav() {
@@ -13,7 +12,7 @@ class Header extends Component {
         return (
           <li>
             <a href="/auth/google">
-              <i className="fa fa-google" aria-hidden="true" />oogle
+              Login with <i className="fa fa-google" aria-hidden="true" />oogle
             </a>
           </li>
         );

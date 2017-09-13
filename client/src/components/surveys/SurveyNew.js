@@ -1,21 +1,36 @@
 import React, { Component } from 'react';
+import { reduxForm } from 'redux-form';
 import SurveyForm from './SurveyForm';
 import { Link } from 'react-router-dom';
+import SurveyReviewForm from './SurveyFormReview';
 
 class componentName extends Component {
-  render() {
+  state = {
+    showReviewForm: false
+  };
+
+  renderContent() {
+    if (this.state.showReviewForm) {
+      return (
+        <div>
+          <h1 className="center-align">Review Survey</h1>
+          <SurveyReviewForm onCancel={() => this.setState({ showReviewForm: false })} />
+        </div>
+      );
+    }
     return (
       <div>
-        <h1>New Survey</h1>
-        <SurveyForm />
-        <div className="fixed-action-btn">
-          <Link to="/surveys" className="btn-floating btn-large red lighten-2">
-            <i className="large material-icons">arrow_back</i>
-          </Link>
-        </div>
+        <h1 className="center-align">New Survey</h1>
+        <SurveyForm onSurveySubmit={() => this.setState({ showReviewForm: true })} />
       </div>
     );
   }
+
+  render() {
+    return <div>{this.renderContent()}</div>;
+  }
 }
 
-export default componentName;
+export default reduxForm({
+  form: 'surveyForm'
+})(componentName);

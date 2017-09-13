@@ -5,7 +5,6 @@ import * as actions from '../actions';
 
 class Payments extends Component {
   render() {
-    console.log('ENV VAR: ', process.env.REACT_APP_STRIPE_KEY);
     return (
       <StripeCheckout
         name="Emaily"
@@ -14,7 +13,9 @@ class Payments extends Component {
         token={token => this.props.handleToken(token)}
         stripeKey={process.env.REACT_APP_STRIPE_KEY}
       >
-        <button className="btn" style={{backgroundColor: '#3d3f4d'}}>Add Credits</button>
+        <button className="btn" style={{ backgroundColor: '#3d3f4d' }}>
+          Add Credits
+        </button>
       </StripeCheckout>
     );
   }
