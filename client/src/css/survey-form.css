@@ -1,0 +1,8 @@
+.input-field .prefix.active {
+  color: #ec6f75;
+}
+
+.input-field input[type='text']:focus {
+  border-bottom: 1px solid #ec6f75;
+  box-shadow: 0 1px 0 0 #000;
+}

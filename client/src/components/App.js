@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Dashboard from './Dashboard';
-import SurveysNew from './SurveysNew';
+import SurveyNew from './surveys/SurveyNew';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
@@ -20,10 +20,10 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Header />
-            <div className="landing">
+            <div className="landing container">
               <Route exact path="/" component={Landing} />
               <Route exact path="/surveys" component={Dashboard} />
-              <Route path="/surveys/new" component={SurveysNew} />
+              <Route path="/surveys/new" component={SurveyNew} />
             </div>
           </div>
         </BrowserRouter>
