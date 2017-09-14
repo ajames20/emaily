@@ -14,7 +14,7 @@ class SurveyForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className="card-styles">
         <div className="row">
           <div className="col s8 push-s2">
             <div className="card darken-1 black-text" style={{ padding: '20px 40px 70px 40px' }}>
