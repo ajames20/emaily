@@ -1,3 +1,20 @@
+.landing {
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+.landing h1 {
+  font-weight: 100;
+  font-size: 6em;
+  margin-top: 2.5em;
+}
+
+.landing h1,
+.landing h5 {
+  color: #3e404d;
+}
+
 .fullscreen-bg {
   position: fixed;
   top: 0;
@@ -6,33 +23,40 @@
   left: 0;
   overflow: hidden;
   z-index: -100;
+  width: auto;
+  height: auto;
+  opacity: 0.387;
 }
 
 .fullscreen-bg__video {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.overlay {
   height: 100%;
-}
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 
-@media (min-aspect-ratio: 16/9) {
-  .fullscreen-bg__video {
-    height: 300%;
-    top: -100%;
-  }
-}
-
-@media (max-aspect-ratio: 16/9) {
-  .fullscreen-bg__video {
-    width: 300%;
-    left: -100%;
-  }
+  background: green;
+  opacity: 0.5;
 }
 
 @media (max-width: 767px) {
   .fullscreen-bg {
-    background: url('../assets/video/We-Work-We-Wait.jpg') center center / cover no-repeat;
+    background: url('http://dev2.slicejack.com/fullscreen-video-demo/img/videoframe.jpg') center center / cover
+      no-repeat;
   }
 
   .fullscreen-bg__video {

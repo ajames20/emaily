@@ -8,9 +8,11 @@ require('../css/landing.css');
 class Landing extends Component {
   render() {
     return (
-      <div className="center-align">
-        <h1>EMAILY</h1>
-        <p>Collect feedback from your users!</p>
+      <div>
+        <div className="center-align landing">
+          <h1>EMAILY</h1>
+          <h5>Collect email survey feedback from your users!</h5>
+        </div>
         <div className="fullscreen-bg">
           <video loop muted autoPlay poster={videoJPG} className="fullscreen-bg__video">
             <source src={videoWebm} type="video/webm" />

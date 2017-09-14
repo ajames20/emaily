@@ -27,7 +27,7 @@ class componentName extends Component {
   }
 
   render() {
-    return <div>{this.renderContent()}</div>;
+    return <div className="hex-bg">{this.renderContent()}</div>;
   }
 }
 

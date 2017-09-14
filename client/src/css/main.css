@@ -7,8 +7,6 @@ html {
 .hex-bg {
   position: fixed;
   left: 0;
-  width: 100%;
-  height: auto;
   min-width: 100%;
   min-height: 100%;
   background-color: #3e404d;
