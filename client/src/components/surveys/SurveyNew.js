@@ -13,14 +13,14 @@ class componentName extends Component {
     if (this.state.showReviewForm) {
       return (
         <div>
-          <h1 className="center-align">Review Survey</h1>
+          <h1 className="center-align skinny-font">Review Survey</h1>
           <SurveyReviewForm onCancel={() => this.setState({ showReviewForm: false })} />
         </div>
       );
     }
     return (
       <div>
-        <h1 className="center-align">New Survey</h1>
+        <h1 className="center-align skinny-font">New Survey</h1>
         <SurveyForm onSurveySubmit={() => this.setState({ showReviewForm: true })} />
       </div>
     );

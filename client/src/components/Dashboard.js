@@ -5,7 +5,7 @@ require('../css/main.css');
 const Dashboard = () => {
   return (
     <div className="hex-bg">
-      <h1 className="center-align">Dashboard</h1>
+      <h1 className="center-align skinny-font">Dashboard</h1>
       <div className="fixed-action-btn">
         <Link to="/surveys/new" className="btn-floating btn-large red lighten-2">
           <i className="large material-icons">add</i>

@@ -17,7 +17,7 @@ class SurveyForm extends Component {
       <div className="card-styles">
         <div className="row">
           <div className="col s8 push-s2">
-            <div className="card darken-1 black-text" style={{ padding: '20px 40px 70px 40px' }}>
+            <div className="card darken-1 black-text" style={{ padding: '40px 40px 60px 40px' }}>
               <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
                 {this.renderFields()}
                 <Link to="/surveys" className="btn left red lighten-2 white-text">
