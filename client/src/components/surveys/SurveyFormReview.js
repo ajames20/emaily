@@ -16,7 +16,7 @@ const SurveyReviewForm = ({ onCancel, formValues, submitSurvey, history }) => {
 
   return (
     <div className="row">
-      <div className="col s8 push-s2">
+      <div className="col s10 push-s1">
         <div className="card darken-1 black-text" style={{ padding: '20px 35px 30px 35px' }}>
           <h5>Please confirm your entries</h5>
           {reviewFields}
@@ -28,7 +28,7 @@ const SurveyReviewForm = ({ onCancel, formValues, submitSurvey, history }) => {
             onClick={() => submitSurvey(formValues, history)}
             className="btn blue darken-3 white-text right"
           >
-            Send Survey<i className="material-icons right">email</i>
+            Send<i className="material-icons right">email</i>
           </button>
         </div>
       </div>

@@ -14,21 +14,18 @@ class SurveyForm extends Component {
 
   render() {
     return (
-      <div className="card-styles">
-        <div className="row">
-          <div className="col s8 push-s2">
-            <div className="card darken-1 black-text" style={{ padding: '40px 40px 60px 40px' }}>
-              <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
-                {this.renderFields()}
-                <Link to="/surveys" className="btn left red lighten-2 white-text">
-                  Cancel
-                </Link>
-                <button className="btn right red lighten-2 white-text" type="submit">
-                  Review
-                  <i className="material-icons right">arrow_forward</i>
-                </button>
-              </form>
-            </div>
+      <div className="row">
+        <div className="col s10 push-s1">
+          <div className="card darken-1 black-text" style={{ padding: '40px 40px 60px 40px' }}>
+            <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
+              {this.renderFields()}
+              <Link to="/surveys" className="btn left red lighten-2 white-text">
+                Cancel
+              </Link>
+              <button className="btn right red lighten-2 white-text" type="submit">
+                Review
+              </button>
+            </form>
           </div>
         </div>
       </div>

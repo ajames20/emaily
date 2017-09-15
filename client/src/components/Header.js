@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Payments from './Payments';
-require('../css/header.css');
+import '../css/header.css';
 
 class Header extends Component {
   renderNav() {
@@ -36,19 +36,21 @@ class Header extends Component {
 
   render() {
     return (
-      <nav className="header">
-        <div className="nav-wrapper container">
-          <Link
-            style={{ color: '#3d3f4d', opacity: '.9' }}
-            to={this.props.auth ? '/surveys' : '/'}
-            className="left brand-logo"
-          >
-            <i className="fa fa-paper-plane" />
-            EMAILY
-          </Link>
-          <ul className="right">{this.renderNav()}</ul>
-        </div>
-      </nav>
+      <div className="navbar-fixed">
+        <nav className="header">
+          <div className="nav-wrapper">
+            <Link
+              style={{ color: '#3d3f4d', opacity: '.9' }}
+              to={this.props.auth ? '/surveys' : '/'}
+              className="left brand-logo"
+            >
+              <i className="fa fa-paper-plane" />
+              EMAILY
+            </Link>
+            <ul className="right right hide-on-med-and-down">{this.renderNav()}</ul>
+          </div>
+        </nav>
+      </div>
     );
   }
 }

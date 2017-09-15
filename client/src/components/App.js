@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 import Landing from './Landing';
-require('../css/main.css');
+import '../css/main.css';
 
 class App extends Component {
   componentDidMount() {

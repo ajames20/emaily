@@ -3,7 +3,7 @@ import videoJPG from '../assets/video/We-Work-We-Wait.jpg';
 import videoWebm from '../assets/video/We-Work-We-Wait.webm';
 import videoMp4 from '../assets/video/We-Work-We-Wait.mp4';
 import videoOgv from '../assets/video/We-Work-We-Wait.ogv';
-require('../css/landing.css');
+import '../css/landing.css';
 
 class Landing extends Component {
   render() {

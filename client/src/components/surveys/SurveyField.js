@@ -1,5 +1,5 @@
 import React from 'react';
-require('../../css/survey-form.css');
+import '../../css/survey-form.css';
 
 const SurveyField = ({ input, label, meta: { error, touched } }) => {
   return (
